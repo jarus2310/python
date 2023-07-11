@@ -1,0 +1,18 @@
+def fibonacci_nth_term(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        previous = 0
+        current = 1
+        for _ in range(2, n + 1):
+            next_number = previous + current
+            previous = current
+            current = next_number
+        return current
+
+# Example usage
+n = 10  # Calculate the 10th term
+nth_term = fibonacci_nth_term(n)
+print(nth_term)
